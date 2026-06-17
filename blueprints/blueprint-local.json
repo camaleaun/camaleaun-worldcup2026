@@ -1,0 +1,22 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "preferredVersions": {
+    "php": "8.4",
+    "wp": "latest"
+  },
+  "login": true,
+  "steps": [
+    {
+      "step": "mount",
+      "mountPoint": "/wordpress/wp-content/plugins/camaleaun-worldcup2026",
+      "device": {
+        "type": "local-filesystem",
+        "path": "."
+      }
+    },
+    {
+      "step": "activatePlugin",
+      "pluginPath": "camaleaun-worldcup2026/camaleaun-worldcup2026.php"
+    }
+  ]
+}

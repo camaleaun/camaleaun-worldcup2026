@@ -1,0 +1,17 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "preferredVersions": {
+    "php": "8.4",
+    "wp": "latest"
+  },
+  "login": true,
+  "steps": [
+    {
+      "step": "installPlugin",
+      "pluginZipFile": {
+        "resource": "url",
+        "url": "https://github.com/camaleaun/camaleaun-worldcup2026/releases/download/trunk/camaleaun-worldcup2026.zip"
+      }
+    }
+  ]
+}

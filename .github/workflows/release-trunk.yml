@@ -1,0 +1,53 @@
+name: Release trunk
+
+on:
+  push:
+    branches: [trunk]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Build & overwrite trunk release
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies & build
+        run: npm ci && npm run build
+
+      - name: Create plugin zip
+        run: |
+          rsync -a \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='node_modules' \
+            --exclude='src' \
+            --exclude='*.config.js' \
+            --exclude='tsconfig.json' \
+            --exclude='package-lock.json' \
+            . /tmp/camaleaun-worldcup2026/
+          cd /tmp && zip -r camaleaun-worldcup2026.zip camaleaun-worldcup2026
+
+      - name: Delete existing trunk release & tag
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release delete trunk --yes --cleanup-tag 2>/dev/null || true
+
+      - name: Create trunk release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create trunk \
+            --title "trunk (latest build)" \
+            --notes "Auto-generated from the latest commit on \`trunk\`. Always overwritten on push." \
+            --prerelease \
+            /tmp/camaleaun-worldcup2026.zip

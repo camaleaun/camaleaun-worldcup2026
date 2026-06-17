@@ -3,6 +3,8 @@
 > **FIFA World Cup 2026™** interactive schedule as a Gutenberg block.  
 > Full calendar, group standings, knockout bracket and live score entry — all in one self-contained plugin.
 
+[![Try in Playground](https://img.shields.io/badge/Try%20in-WordPress%20Playground-3858e9?logo=wordpress&logoColor=white)](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/camaleaun/camaleaun-worldcup2026/trunk/blueprints/blueprint.json)
+
 ---
 
 ## Architecture
