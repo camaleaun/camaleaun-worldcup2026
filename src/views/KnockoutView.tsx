@@ -123,7 +123,7 @@ export default function KnockoutView( {
 				</div>
 				<div className="wc2026-ko-matchup">
 					<div className="wc2026-ko-team">
-						<span className="flag">{ h.flag }</span>
+						<img className="flag" src={ h.flag_url } alt={ h.name } width="28" height="21" loading="lazy" />
 						<span className="name">{ h.name }</span>
 					</div>
 					{ hasScore ? (
@@ -135,7 +135,7 @@ export default function KnockoutView( {
 						<span className="wc2026-ko-vs">×</span>
 					) }
 					<div className="wc2026-ko-team">
-						<span className="flag">{ a.flag }</span>
+						<img className="flag" src={ a.flag_url } alt={ a.name } width="28" height="21" loading="lazy" />
 						<span className="name">{ a.name }</span>
 					</div>
 				</div>

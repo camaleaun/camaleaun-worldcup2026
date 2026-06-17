@@ -20,13 +20,15 @@ function readStorage(): ScoresMap {
 }
 
 export interface UseScoresReturn {
-	scores:        ScoresMap;
-	updateScore:   ( id: number, score: MatchScore ) => void;
-	deleteScore:   ( id: number ) => void;
-	clearScores:   () => void;
+	scores:            ScoresMap;
+	updateScore:       ( id: number, score: MatchScore ) => void;
+	deleteScore:       ( id: number ) => void;
+	clearScores:       () => void;
 	/** Bulk-load scores from a GitHub results URL. Throws on failure. */
-	syncFromUrl:   ( url: string ) => Promise<{ count: number; updated: string }>;
-	syncing:       boolean;
+	syncFromUrl:       ( url: string ) => Promise<{ count: number; updated: string }>;
+	/** Sync a single match official result from the plugin REST API. */
+	syncMatchFromRest: ( matchId: number ) => Promise<MatchScore | null>;
+	syncing:           boolean;
 }
 
 export function useScores(): UseScoresReturn {
@@ -87,5 +89,35 @@ export function useScores(): UseScoresReturn {
 		}
 	}, [] );
 
-	return { scores, updateScore, deleteScore, clearScores, syncFromUrl, syncing };
+	const syncMatchFromRest = useCallback( async ( matchId: number ): Promise<MatchScore | null> => {
+		const base = ( window as any ).CWC26Admin?.restUrl
+			?? ( window as any ).WC2026Rest?.restUrl
+			?? '/wp-json/cwc26/v1';
+
+		const nonce = ( window as any ).CWC26Admin?.nonce
+			?? ( window as any ).WC2026Rest?.nonce
+			?? '';
+
+		const res = await fetch( `${ base }/matches/${ matchId }`, {
+			headers: nonce ? { 'X-WP-Nonce': nonce } : {},
+		} );
+
+		if ( ! res.ok ) return null;
+
+		const match = await res.json();
+
+		if ( match.home_score === null || match.home_score === undefined ) return null;
+
+		const score: MatchScore = {
+			homeGoals:     match.home_score,
+			awayGoals:     match.away_score,
+			homePenalties: match.home_penalties ?? null,
+			awayPenalties: match.away_penalties ?? null,
+		};
+
+		updateScore( matchId, score );
+		return score;
+	}, [ updateScore ] );
+
+	return { scores, updateScore, deleteScore, clearScores, syncFromUrl, syncMatchFromRest, syncing };
 }

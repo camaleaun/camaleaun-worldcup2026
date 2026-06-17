@@ -118,9 +118,9 @@ export default function MatchesView( {
 										<small>{ fmtTime( m.utc, timezone ) }</small>
 									</td>
 									<td className="td-fixture">
-										{ h.flag } { h.name }
+										<img src={ h.flag_url } alt={ h.name } width="16" height="12" loading="lazy" /> { h.name }
 										<span className="fixture-sep"> × </span>
-										{ a.flag } { a.name }
+										<img src={ a.flag_url } alt={ a.name } width="16" height="12" loading="lazy" /> { a.name }
 									</td>
 									<td className="td-score"><ScoreCell id={ m.id } /></td>
 									<td className="td-venue col-hide-md">{ s.city }</td>

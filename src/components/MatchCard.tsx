@@ -10,14 +10,15 @@ import { fmtTime } from '../utils';
 import ScoreInput from './ScoreInput';
 
 interface MatchCardProps {
-	match:       MatchWithPhase;
-	timezone:    string;
-	score?:      MatchScore;
-	isEditing:   boolean;
-	onEdit:      () => void;
-	onSave:      ( score: MatchScore ) => void;
-	onCancelEdit:() => void;
-	onClick:     () => void; // Click card body → detail panel
+	match:          MatchWithPhase;
+	timezone:       string;
+	score?:         MatchScore;
+	isEditing:      boolean;
+	onEdit:         () => void;
+	onSave:         ( score: MatchScore ) => void;
+	onCancelEdit:   () => void;
+	onClick:        () => void; // Click card body → detail panel
+	onSyncMatch?:   ( id: number ) => Promise<unknown>; // Sync official result
 }
 
 export default function MatchCard( {
@@ -75,7 +76,7 @@ export default function MatchCard( {
 			<span className="wc2026-match-time">{ fmtTime( match.utc, timezone ) }</span>
 
 			<span className="wc2026-match-teams">
-				<span className="wc2026-match-flag">{ homeTeam.flag }</span>
+				<img className="wc2026-match-flag" src={ homeTeam.flag_url } alt={ homeTeam.name } width="20" height="15" loading="lazy" />
 				<span className="team-name">{ homeTeam.name }</span>
 
 				{ hasScore ? (
@@ -85,7 +86,7 @@ export default function MatchCard( {
 				) }
 
 				<span className="team-name">{ awayTeam.name }</span>
-				<span className="wc2026-match-flag">{ awayTeam.flag }</span>
+				<img className="wc2026-match-flag" src={ awayTeam.flag_url } alt={ awayTeam.name } width="20" height="15" loading="lazy" />
 			</span>
 
 			<span className="wc2026-match-venue">{ stadium.city }</span>
@@ -98,6 +99,16 @@ export default function MatchCard( {
 			>
 				✏️
 			</button>
+			{ onSyncMatch && match.match_status === 'finished' && (
+				<button
+					className="wc2026-sync-match-btn"
+					aria-label="Sync official result"
+					onClick={ e => { e.stopPropagation(); onSyncMatch( match.id ); } }
+					title="Sync official result"
+				>
+					⬇️
+				</button>
+			) }
 		</div>
 	);
 }

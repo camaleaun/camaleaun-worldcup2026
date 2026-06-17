@@ -88,7 +88,7 @@ export default function ScoreInput( {
 		<form className="wc2026-score-form" onSubmit={ handleSave }>
 			<div className="wc2026-score-row">
 				<span className="wc2026-score-team">
-					<span className="flag">{ homeTeam.flag }</span>
+					<img className="flag" src={ homeTeam.flag_url } alt={ homeTeam.name } width="16" height="12" loading="lazy" />
 					<span className="name">{ homeTeam.name }</span>
 				</span>
 				{ numInput( homeGoals, setHomeGoals, homeRef ) }
@@ -96,7 +96,7 @@ export default function ScoreInput( {
 				{ numInput( awayGoals, setAwayGoals ) }
 				<span className="wc2026-score-team wc2026-score-team--away">
 					<span className="name">{ awayTeam.name }</span>
-					<span className="flag">{ awayTeam.flag }</span>
+					<img className="flag" src={ awayTeam.flag_url } alt={ awayTeam.name } width="16" height="12" loading="lazy" />
 				</span>
 			</div>
 

@@ -58,7 +58,7 @@ function GroupDetail( {
 						return (
 							<tr key={ s.code } className={ qualified ? 'row-qualified' : '' }>
 								<td className="s-muted">{ i + 1 }</td>
-								<td><div className="s-team"><span>{ t.flag }</span><span>{ t.name }</span></div></td>
+								<td><div className="s-team"><img src={ t.flag_url } alt={ t.name } width="16" height="12" loading="lazy" /><span>{ t.name }</span></div></td>
 								<td className="s-muted">{ s.mp }</td>
 								<td className="s-muted">{ s.w  }</td>
 								<td className="s-muted">{ s.d  }</td>
@@ -115,7 +115,7 @@ function GroupDetail( {
 					<div key={ m.id } className={ `wc2026-match-card${ hasScore ? ' has-score' : '' }` }>
 						<span className="wc2026-match-time">{ fmtTime( m.utc, timezone ) }</span>
 						<span className="wc2026-match-teams">
-							<span className="wc2026-match-flag">{ h.flag }</span>
+							<img className="wc2026-match-flag" src={ h.flag_url } alt={ h.name } width="20" height="15" loading="lazy" />
 							<span className="team-name">{ h.name }</span>
 							{ hasScore ? (
 								<span className="wc2026-score-display">
@@ -127,7 +127,7 @@ function GroupDetail( {
 								<span className="wc2026-match-sep">×</span>
 							) }
 							<span className="team-name">{ a.name }</span>
-							<span className="wc2026-match-flag">{ a.flag }</span>
+							<img className="wc2026-match-flag" src={ a.flag_url } alt={ a.name } width="20" height="15" loading="lazy" />
 						</span>
 						<span className="wc2026-match-venue">{ std.city }</span>
 						<button
@@ -172,7 +172,7 @@ export default function GroupsView( props: GroupsViewProps ): JSX.Element {
 								const t = getTeam( code );
 								return (
 									<div key={ code } className="wc2026-group-team">
-										<span className="flag">{ t.flag }</span>
+										<img className="flag" src={ t.flag_url } alt={ t.name } width="16" height="12" loading="lazy" />
 										<span>{ t.name }</span>
 									</div>
 								);

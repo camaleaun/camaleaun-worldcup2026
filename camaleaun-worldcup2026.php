@@ -17,6 +17,18 @@ defined( 'ABSPATH' ) || exit;
 
 define( 'WC2026_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'WC2026_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+define( 'WC2026_VERSION',    '2.0.0' );
+
+require_once WC2026_PLUGIN_DIR . 'includes/class-cwc26-db.php';
+require_once WC2026_PLUGIN_DIR . 'includes/class-cwc26-seeder.php';
+require_once WC2026_PLUGIN_DIR . 'includes/class-cwc26-rest.php';
+require_once WC2026_PLUGIN_DIR . 'includes/class-cwc26-admin.php';
+
+register_activation_hook( __FILE__, [ 'CWC26_DB', 'install' ] );
+register_uninstall_hook( __FILE__, [ 'CWC26_DB', 'uninstall' ] );
+
+CWC26_REST::init();
+CWC26_Admin::init();
 
 /**
  * Load plugin text domain for PHP strings.
@@ -97,14 +109,11 @@ function wc2026_render_block( array $attributes ): string {
 	wp_enqueue_script( 'wc2026-frontend' );
 	wp_enqueue_style( 'wc2026-style' );
 
-	// Inline match JSON exactly once per page.
+	// Inline schedule data exactly once per page — sourced from DB when available.
 	static $data_inlined = false;
 	if ( ! $data_inlined ) {
-		$json_path = WC2026_PLUGIN_DIR . 'src/data.json';
-		if ( file_exists( $json_path ) ) {
-			$json = file_get_contents( $json_path ); // phpcs:ignore WordPress.WP.AlternativeFunctions.file_get_contents_file_get_contents
-			wp_add_inline_script( 'wc2026-frontend', 'window.WC2026Data=' . $json . ';', 'before' );
-		}
+		$json = wc2026_build_schedule_json();
+		wp_add_inline_script( 'wc2026-frontend', 'window.WC2026Data=' . $json . ';', 'before' );
 		$data_inlined = true;
 	}
 
@@ -125,4 +134,85 @@ function wc2026_render_block( array $attributes ): string {
 		esc_attr( $results_url ),
 		esc_html__( 'Please enable JavaScript to view the FIFA World Cup 2026™ schedule.', 'camaleaun-worldcup2026' )
 	);
+}
+
+/**
+ * Build the WC2026Data JSON payload for the frontend.
+ *
+ * Falls back to src/data.json when the DB tables are not yet installed.
+ */
+function wc2026_build_schedule_json(): string {
+	global $wpdb;
+
+	// Fallback: DB not installed yet.
+	if ( ! get_option( CWC26_DB::OPTION_KEY ) ) {
+		$path = WC2026_PLUGIN_DIR . 'src/data.json';
+		return file_exists( $path ) ? file_get_contents( $path ) : '{}'; // phpcs:ignore
+	}
+
+	// ── Teams ────────────────────────────────────────────────────────────
+	$team_rows = $wpdb->get_results(
+		'SELECT fifa_code, name, flag_iso, ranking FROM ' . CWC26_DB::teams(),
+		ARRAY_A
+	);
+	$teams = [];
+	foreach ( $team_rows as $r ) {
+		$teams[ $r['fifa_code'] ] = [
+			'name'     => $r['name'],
+			'flag_url' => WC2026_PLUGIN_URL . 'assets/flags/' . strtolower( $r['fifa_code'] ) . '.svg',
+			'ranking'  => $r['ranking'] ? (int) $r['ranking'] : null,
+		];
+	}
+
+	// ── Stadiums ─────────────────────────────────────────────────────────
+	$stad_rows = $wpdb->get_results(
+		'SELECT roman_id, city, name FROM ' . CWC26_DB::stadiums(),
+		ARRAY_A
+	);
+	$stadiums = [];
+	foreach ( $stad_rows as $r ) {
+		$stadiums[ $r['roman_id'] ] = [ 'city' => $r['city'], 'name' => $r['name'] ];
+	}
+
+	// ── Matches ──────────────────────────────────────────────────────────
+	$match_rows = $wpdb->get_results(
+		'SELECT * FROM ' . CWC26_DB::matches() . ' ORDER BY match_utc ASC',
+		ARRAY_A
+	);
+
+	$groups   = [];
+	$knockout = [ 'round_of_32' => [], 'round_of_16' => [], 'quarter_finals' => [], 'semi_finals' => [], 'finals' => [] ];
+	$round_key = [ 'r32' => 'round_of_32', 'r16' => 'round_of_16', 'qf' => 'quarter_finals', 'sf' => 'semi_finals', 'f' => 'finals', 'po' => 'finals' ];
+
+	foreach ( $match_rows as $m ) {
+		$match = [
+			'id'           => (int) $m['match_id'],
+			'round'        => $m['round'],
+			'utc'          => str_replace( ' ', 'T', $m['match_utc'] ) . 'Z',
+			'stadium'      => $m['stadium_id'],
+			'home'         => $m['home_code'],
+			'away'         => $m['away_code'],
+			'home_score'   => isset( $m['home_score'] ) ? (int) $m['home_score'] : null,
+			'away_score'   => isset( $m['away_score'] ) ? (int) $m['away_score'] : null,
+			'match_status' => $m['match_status'],
+		];
+
+		if ( 'group' === $m['phase'] ) {
+			$letter = $m['group_letter'];
+			if ( ! isset( $groups[ $letter ] ) ) {
+				// Fetch team order from cwc26_groups.
+				$team_rows2 = $wpdb->get_results( $wpdb->prepare(
+					'SELECT team_code FROM ' . CWC26_DB::groups() . ' WHERE group_letter = %s ORDER BY position ASC',
+					$letter
+				), ARRAY_A );
+				$groups[ $letter ] = [ 'teams' => array_column( $team_rows2, 'team_code' ), 'matches' => [] ];
+			}
+			$groups[ $letter ]['matches'][] = $match;
+		} else {
+			$key = $round_key[ $m['round'] ] ?? 'finals';
+			$knockout[ $key ][] = $match;
+		}
+	}
+
+	return wp_json_encode( compact( 'teams', 'stadiums', 'groups', 'knockout' ) );
 }

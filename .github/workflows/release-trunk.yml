@@ -20,8 +20,8 @@ jobs:
           node-version: '20'
           cache: 'npm'
 
-      - name: Install dependencies & build
-        run: npm ci && npm run build
+      - name: Install dependencies, build & download flags
+        run: npm ci && npm run build && npm run flags
 
       - name: Create plugin zip
         run: |

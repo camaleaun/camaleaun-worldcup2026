@@ -48,7 +48,7 @@ export default function MatchDetail( {
 
 			<div className="wc2026-detail-hero">
 				<div className="wc2026-detail-team">
-					<span className="wc2026-detail-flag">{ homeTeam.flag }</span>
+					<img className="wc2026-detail-flag" src={ homeTeam.flag_url } alt={ homeTeam.name } width="52" height="39" loading="lazy" />
 					<span className="wc2026-detail-name">{ homeTeam.name }</span>
 				</div>
 
@@ -70,7 +70,7 @@ export default function MatchDetail( {
 				</div>
 
 				<div className="wc2026-detail-team">
-					<span className="wc2026-detail-flag">{ awayTeam.flag }</span>
+					<img className="wc2026-detail-flag" src={ awayTeam.flag_url } alt={ awayTeam.name } width="52" height="39" loading="lazy" />
 					<span className="wc2026-detail-name">{ awayTeam.name }</span>
 				</div>
 			</div>

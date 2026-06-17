@@ -32,7 +32,7 @@ export default function App( { defaultTab, resultsUrl }: AppProps ): JSX.Element
 	const [ syncMsg,       setSyncMsg      ] = useState<string>( '' );
 
 	const [ timezone, setTimezone ] = useTimezone();
-	const { scores, updateScore, deleteScore, clearScores, syncFromUrl, syncing } = useScores();
+	const { scores, updateScore, deleteScore, clearScores, syncFromUrl, syncMatchFromRest, syncing } = useScores();
 
 	function switchTab( next: TabKey ) {
 		setTab( next );
@@ -60,8 +60,9 @@ export default function App( { defaultTab, resultsUrl }: AppProps ): JSX.Element
 	const commonProps = {
 		timezone,
 		scores,
-		onSaveScore:   handleSaveScore,
-		onDeleteScore: deleteScore,
+		onSaveScore:      handleSaveScore,
+		onDeleteScore:    deleteScore,
+		onSyncMatch:      syncMatchFromRest,
 	};
 
 	return (

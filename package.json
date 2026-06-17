@@ -4,17 +4,22 @@
   "private": true,
   "description": "FIFA World Cup 2026™ schedule Gutenberg block",
   "scripts": {
-    "build":          "wp-scripts build",
-    "start":          "wp-scripts start",
-    "check-types":    "tsc --noEmit",
-    "lint":           "wp-scripts lint-js",
-    "playground":     "npm run build && npx @wp-playground/cli@latest server --blueprint=blueprints/blueprint-local.json",
+    "build": "wp-scripts build",
+    "start": "wp-scripts start",
+    "check-types": "tsc --noEmit",
+    "lint": "wp-scripts lint-js",
+    "flags": "node scripts/download-flags.mjs",
+    "readme": "grunt readme",
+    "playground": "npm run build && npx @wp-playground/cli@latest server --blueprint=blueprints/blueprint-local.json",
     "playground:web": "npm run build && npx @wp-playground/cli@latest server --blueprint=blueprints/blueprint.json"
   },
   "devDependencies": {
+    "@types/react": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "@wordpress/dataviews": "^16.0.1",
     "@wordpress/scripts": "^30.0.0",
-    "@types/react":       "^18.3.0",
-    "@types/react-dom":   "^18.3.0",
-    "typescript":         "^5.4.0"
+    "grunt": "^1.6.2",
+    "grunt-wp-readme-to-markdown": "^2.1.0",
+    "typescript": "^5.4.0"
   }
 }

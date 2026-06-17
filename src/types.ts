@@ -5,9 +5,9 @@
 // ── Raw data shapes (from data.json) ────────────────────────────────────────
 
 export interface Team {
-	flag:     string;
+	flag_url: string; // https://flagcdn.com/{iso}.svg
 	name:     string;
-	name_ptb: string;
+	ranking:  number | null;
 }
 
 export interface Stadium {
@@ -16,13 +16,19 @@ export interface Stadium {
 }
 
 export interface RawMatch {
-	id:      number;
-	round:   string;
-	utc:     string;
-	stadium: string;
-	home:    string;
-	away:    string;
-	label?:  string; // Knockout bracket label e.g. "W74xW77"
+	id:           number;
+	round:        string;
+	utc:          string;
+	stadium:      string;
+	home:         string;
+	away:         string;
+	label?:       string;        // Knockout bracket label e.g. "W74xW77"
+	// Official results (from DB via REST — read-only on frontend)
+	home_score?:      number | null;
+	away_score?:      number | null;
+	home_penalties?:  number | null;
+	away_penalties?:  number | null;
+	match_status?:    'scheduled' | 'live' | 'finished';
 }
 
 export interface GroupData {

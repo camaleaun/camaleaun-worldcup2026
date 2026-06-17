@@ -1,21 +1,16 @@
-# FIFA World Cup 2026™ Schedule
-
-> **Interactive schedule as a Gutenberg block.**  
-> Calendar · Groups · Knockout bracket · Score entry · DB-backed · REST API
-
-[![Try in Playground](https://img.shields.io/badge/Try%20in-WordPress%20Playground-3858e9?logo=wordpress&logoColor=white)](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/camaleaun/camaleaun-worldcup2026/trunk/blueprints/blueprint.json)
-**Contributors:** [camaleaun](https://profiles.wordpress.org/camaleaun/)  
-**Tags:** fifa, world cup, soccer, schedule, block  
-**Requires at least:** 6.4  
-**Tested up to:** 6.8  
-**Requires PHP:** 8.0  
-**Stable tag:** trunk  
-**License:** GPL-2.0-or-later  
-**License URI:** https://www.gnu.org/licenses/gpl-2.0.html  
+=== FIFA World Cup 2026™ Schedule ===
+Contributors: camaleaun
+Tags: fifa, world cup, soccer, schedule, block
+Requires at least: 6.4
+Tested up to: 6.8
+Requires PHP: 8.0
+Stable tag: trunk
+License: GPL-2.0-or-later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 Interactive FIFA World Cup 2026™ schedule as a Gutenberg block — calendar, groups, knockout bracket and score entry.
 
-## Description ##
+== Description ==
 
 Full-featured World Cup schedule block with four views (Calendar, Matches, Groups, Knockout), live standings computed from entered scores, per-match sync from the plugin's own database, timezone support and local SVG flags for all 48 national teams.
 
@@ -31,11 +26,11 @@ Full-featured World Cup schedule block with four views (Calendar, Matches, Group
 * 🏴 Flags — local SVG files (`assets/flags/bra.svg` etc.), no external CDN dependency at runtime
 * 🕐 Timezone — 29 common IANA timezones, persisted in `localStorage`
 
-## Database Schema ##
+== Database Schema ==
 
 Five custom tables are created on activation under the `{prefix}cwc26_` namespace. The schema mirrors the WordPress `wp_posts` + `wp_postmeta` and `wp_terms` + `wp_term_taxonomy` patterns for familiarity.
 
-### cwc26_teams ###
+= cwc26_teams =
 
 The 48 qualified national teams.
 
@@ -47,7 +42,7 @@ The 48 qualified national teams.
 | `name` | VARCHAR(100) NOT NULL | English team name |
 | `ranking` | INT UNSIGNED | FIFA ranking at time of draw |
 
-### cwc26_stadiums ###
+= cwc26_stadiums =
 
 The 16 FIFA World Cup 2026™ venues.
 
@@ -58,7 +53,7 @@ The 16 FIFA World Cup 2026™ venues.
 | `city` | VARCHAR(100) NOT NULL | Host city |
 | `name` | VARCHAR(150) NOT NULL | Full venue name |
 
-### cwc26_groups ###
+= cwc26_groups =
 
 Pivot table mapping each team to its group-phase group.
 
@@ -68,7 +63,7 @@ Pivot table mapping each team to its group-phase group.
 | `group_letter` | CHAR(1) NOT NULL | `A`–`L` |
 | `team_code` | VARCHAR(4) NOT NULL | FK → `cwc26_teams.fifa_code` |
 
-### cwc26_matches ###
+= cwc26_matches =
 
 The 104 scheduled matches.
 
@@ -86,7 +81,7 @@ The 104 scheduled matches.
 | `away_score` | INT | Goals after 90 min; NULL until played |
 | `match_status` | VARCHAR(20) NOT NULL | `scheduled` / `live` / `finished` |
 
-### cwc26_matchmeta ###
+= cwc26_matchmeta =
 
 Key-value metadata per match — mirrors the WordPress `wp_postmeta` pattern. Two own columns are `meta_key` + `meta_value`.
 
@@ -97,7 +92,7 @@ Key-value metadata per match — mirrors the WordPress `wp_postmeta` pattern. Tw
 | `meta_key` | VARCHAR(255) NOT NULL | e.g. `home_penalties`, `away_penalties` |
 | `meta_value` | LONGTEXT | Serialized value |
 
-## REST API ##
+== REST API ==
 
 Base namespace: `cwc26/v1`
 
@@ -109,7 +104,7 @@ Base namespace: `cwc26/v1`
 | GET | `/matches/{id}` | — | Single match by ID |
 | POST | `/matches/{id}/score` | Editor+ | Set `home_score`, `away_score`, `match_status` |
 
-## Block Attributes ##
+== Block Attributes ==
 
 | Attribute | Type | Default | Description |
 | --- | --- | --- | --- |
@@ -117,109 +112,24 @@ Base namespace: `cwc26/v1`
 | `resultsUrl` | string | GitHub raw URL | URL for bulk `results.json` sync |
 | `align` | string | `wide` | Block alignment (`wide` or `full`) |
 
-## i18n ##
+== i18n ==
 
 * `.pot` template generated with `wp i18n make-pot`
 * `.po` for `pt_BR` — 80+ strings including all 48 team names
 * `.mo` compiled and ready
 
-## Changelog ##
+== Changelog ==
 
-### 1.2.0 ###
+= 1.2.0 =
 * Add normalized DB tables (`cwc26_*`), REST API (`cwc26/v1`), DataViews admin page, per-match sync, and local SVG flags.
 
-### 1.1.0 ###
+= 1.1.0 =
 * Add WordPress Playground blueprints and CI release workflow.
 
-### 1.0.0 ###
+= 1.0.0 =
 * Initial release — block plugin with Calendar, Matches, Groups, and Knockout views, score entry and timezone support.
 
-## Upgrade Notice ##
+== Upgrade Notice ==
 
-### 1.0.0 ###
+= 1.0.0 =
 Initial release.
-
----
-
-## Development
-
-### Requirements
-
-| Tool | Version |
-| --- | --- |
-| Node.js | ≥ 18 |
-| npm | ≥ 9 |
-| PHP | ≥ 8.0 |
-
-### Scripts
-
-```bash
-npm install          # install dependencies
-npm run build        # production build → build/
-npm run start        # development watch
-npm run flags        # download flag SVGs → assets/flags/
-npm run readme       # regenerate README.md from readme.txt
-npm run check-types  # TypeScript type-check (no emit)
-```
-
-### Source Structure
-
-```
-src/
-├── index.tsx              # Block registration + editor preview
-├── frontend.tsx           # Front-end entry — mounts React
-├── App.tsx                # Root: tabs, timezone, sync
-├── types.ts               # TypeScript interfaces
-├── data.ts                # DB data helpers (getTeam, getStadium…)
-├── utils.ts               # Datetime formatting + standings calc
-├── hooks/
-│   ├── useScores.ts       # localStorage state + REST sync
-│   └── useTimezone.ts     # Timezone state + persistence
-├── components/
-│   ├── MatchCard.tsx      # Card used across all views
-│   ├── MatchDetail.tsx    # Full match panel with score editing
-│   └── ScoreInput.tsx     # Inline score form (goals + penalties)
-├── views/
-│   ├── CalendarView.tsx   # Day-grouped calendar
-│   ├── MatchesView.tsx    # Filterable matches table
-│   ├── GroupsView.tsx     # Groups grid → live standings
-│   └── KnockoutView.tsx   # Bracket (desktop / mobile)
-├── admin/
-│   └── index.tsx          # WP admin DataViews page
-├── frontend.css           # Front-end styles (dark navy + FIFA gold)
-└── editor.css             # Editor-only preview styles
-
-includes/
-├── class-cwc26-db.php     # Table creation (dbDelta) + meta helpers
-├── class-cwc26-seeder.php # Seeds all tables from src/data.json
-├── class-cwc26-rest.php   # REST namespace cwc26/v1
-└── class-cwc26-admin.php  # Admin menu page + script enqueue
-
-scripts/
-└── download-flags.mjs     # Downloads flag SVGs from flagcdn.com
-```
-
-### Flag SVGs
-
-Flag files live in `assets/flags/` using lowercase FIFA codes (`bra.svg`, `arg.svg`, …).
-They are **gitignored** — download locally with `npm run flags`.
-The CI release workflow runs `npm run flags` automatically before creating the zip.
-
-### GitHub Sync — `data/results.json` format
-
-Place this file at the raw URL configured in the block settings:
-
-```json
-{
-  "version": "1.0",
-  "updated": "2026-06-11",
-  "scores": {
-    "1":  { "home": 2, "away": 0 },
-    "73": { "home": 1, "away": 1, "homePenalties": 4, "awayPenalties": 3 }
-  }
-}
-```
-
-- **Key** — match ID (1–104)
-- **`home` / `away`** — goals after 90 minutes
-- **`homePenalties` / `awayPenalties`** — penalty shootout, knockout draws only

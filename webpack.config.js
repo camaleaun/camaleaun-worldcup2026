@@ -7,7 +7,8 @@ const defaultConfig = require( '@wordpress/scripts/config/webpack.config' );
 module.exports = {
 	...defaultConfig,
 	entry: {
-		index:    './src/index.tsx',    // Editor block registration
-		frontend: './src/frontend.tsx', // Front-end interactive app
+		index:          './src/index.tsx',        // Editor block registration
+		frontend:       './src/frontend.tsx',     // Front-end interactive app
+		'admin/index':  './src/admin/index.tsx',  // WP admin DataViews page
 	},
 };

@@ -4,6 +4,9 @@ node_modules/
 # Build output (regenerated with `npm run build`)
 build/
 
+# Flag SVGs — downloaded by `npm run flags`, bundled in release zip
+assets/flags/
+
 # macOS
 .DS_Store
 .AppleDouble
