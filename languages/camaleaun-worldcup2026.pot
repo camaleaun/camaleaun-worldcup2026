@@ -1,0 +1,242 @@
+# Copyright (C) 2026 camaleaun
+# This file is distributed under the same license as the WC2026 Schedule plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: camaleaun-worldcup2026 2.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wc2026-schedule\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-06-14T03:15:57+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: camaleaun-worldcup2026\n"
+
+#. Plugin Name of the plugin
+#: wc2026-schedule.php
+msgid "WC2026 Schedule"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: wc2026-schedule.php
+msgid "https://github.com/camaleaun/camaleaun-worldcup2026"
+msgstr ""
+
+#. Description of the plugin
+#: wc2026-schedule.php
+msgid "FIFA World Cup 2026™ interactive schedule block — calendar, matches, groups and knockout bracket with live score tracking."
+msgstr ""
+
+#. Author of the plugin
+#: wc2026-schedule.php
+msgid "camaleaun"
+msgstr ""
+
+#: wc2026-schedule.php:126
+msgid "Please enable JavaScript to view the FIFA World Cup 2026™ schedule."
+msgstr ""
+
+#: block.json
+msgctxt "block title"
+msgid "World Cup 2026 Schedule"
+msgstr ""
+
+#: block.json
+msgctxt "block description"
+msgid "Full FIFA World Cup 2026™ interactive schedule with live score tracking."
+msgstr ""
+
+#. Team names (translated via gettext in JS/PHP)
+#: src/data.json
+msgid "Australia"
+msgstr ""
+
+#: src/data.json
+msgid "Bosnia and Herzegovina"
+msgstr ""
+
+#: src/data.json
+msgid "Brazil"
+msgstr ""
+
+#: src/data.json
+msgid "Canada"
+msgstr ""
+
+#: src/data.json
+msgid "Czechia"
+msgstr ""
+
+#: src/data.json
+msgid "Haiti"
+msgstr ""
+
+#: src/data.json
+msgid "Korea Republic"
+msgstr ""
+
+#: src/data.json
+msgid "Morocco"
+msgstr ""
+
+#: src/data.json
+msgid "Mexico"
+msgstr ""
+
+#: src/data.json
+msgid "Paraguay"
+msgstr ""
+
+#: src/data.json
+msgid "Qatar"
+msgstr ""
+
+#: src/data.json
+msgid "South Africa"
+msgstr ""
+
+#: src/data.json
+msgid "Scotland"
+msgstr ""
+
+#: src/data.json
+msgid "Switzerland"
+msgstr ""
+
+#: src/data.json
+msgid "Türkiye"
+msgstr ""
+
+#: src/data.json
+msgid "USA"
+msgstr ""
+
+#: src/data.json
+msgid "Belgium"
+msgstr ""
+
+#: src/data.json
+msgid "Côte d'Ivoire"
+msgstr ""
+
+#: src/data.json
+msgid "Cabo Verde"
+msgstr ""
+
+#: src/data.json
+msgid "Curaçao"
+msgstr ""
+
+#: src/data.json
+msgid "Ecuador"
+msgstr ""
+
+#: src/data.json
+msgid "Egypt"
+msgstr ""
+
+#: src/data.json
+msgid "Spain"
+msgstr ""
+
+#: src/data.json
+msgid "Germany"
+msgstr ""
+
+#: src/data.json
+msgid "IR Iran"
+msgstr ""
+
+#: src/data.json
+msgid "Japan"
+msgstr ""
+
+#: src/data.json
+msgid "Saudi Arabia"
+msgstr ""
+
+#: src/data.json
+msgid "Netherlands"
+msgstr ""
+
+#: src/data.json
+msgid "New Zealand"
+msgstr ""
+
+#: src/data.json
+msgid "Sweden"
+msgstr ""
+
+#: src/data.json
+msgid "Tunisia"
+msgstr ""
+
+#: src/data.json
+msgid "Uruguay"
+msgstr ""
+
+#: src/data.json
+msgid "Algeria"
+msgstr ""
+
+#: src/data.json
+msgid "Argentina"
+msgstr ""
+
+#: src/data.json
+msgid "Austria"
+msgstr ""
+
+#: src/data.json
+msgid "DR Congo"
+msgstr ""
+
+#: src/data.json
+msgid "Colombia"
+msgstr ""
+
+#: src/data.json
+msgid "Croatia"
+msgstr ""
+
+#: src/data.json
+msgid "England"
+msgstr ""
+
+#: src/data.json
+msgid "France"
+msgstr ""
+
+#: src/data.json
+msgid "Ghana"
+msgstr ""
+
+#: src/data.json
+msgid "Iraq"
+msgstr ""
+
+#: src/data.json
+msgid "Jordan"
+msgstr ""
+
+#: src/data.json
+msgid "Norway"
+msgstr ""
+
+#: src/data.json
+msgid "Panama"
+msgstr ""
+
+#: src/data.json
+msgid "Portugal"
+msgstr ""
+
+#: src/data.json
+msgid "Senegal"
+msgstr ""
+
+#: src/data.json
+msgid "Uzbekistan"
+msgstr ""

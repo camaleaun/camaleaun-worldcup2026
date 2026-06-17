@@ -1,0 +1,33 @@
+# Dependencies
+node_modules/
+
+# Build output (regenerated with `npm run build`)
+build/
+
+# npm lock file (keep package.json, skip lock for portability)
+package-lock.json
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor / IDE
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment / local overrides
+.env
+.env.local
+
+# TypeScript cache
+*.tsbuildinfo

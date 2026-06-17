@@ -1,0 +1,32 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "wc2026/schedule",
+  "version": "1.0.0",
+  "title": "World Cup 2026 Schedule",
+  "category": "widgets",
+  "icon": "tickets",
+  "description": "Full FIFA World Cup 2026™ interactive schedule with live score tracking.",
+  "textdomain": "camaleaun-worldcup2026",
+  "editorScript": "wc2026-editor",
+  "editorStyle":  "wc2026-editor-style",
+  "style":        "wc2026-style",
+  "attributes": {
+    "defaultTab": {
+      "type":    "string",
+      "default": "calendar"
+    },
+    "resultsUrl": {
+      "type":    "string",
+      "default": "https://raw.githubusercontent.com/camaleaun/camaleaun-worldcup2026/trunk/data/results.json"
+    },
+    "align": {
+      "type":    "string",
+      "default": "wide"
+    }
+  },
+  "supports": {
+    "html":  false,
+    "align": ["wide", "full"]
+  }
+}

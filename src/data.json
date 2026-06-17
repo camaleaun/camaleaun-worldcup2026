@@ -1,0 +1,1308 @@
+{
+  "teams": {
+    "AUS": {
+      "flag": "🇦🇺",
+      "name": "Australia",
+      "ranking": 27
+    },
+    "BIH": {
+      "flag": "🇧🇦",
+      "name": "Bosnia and Herzegovina",
+      "ranking": 64
+    },
+    "BRA": {
+      "flag": "🇧🇷",
+      "name": "Brazil",
+      "ranking": 6
+    },
+    "CAN": {
+      "flag": "🇨🇦",
+      "name": "Canada",
+      "ranking": 30
+    },
+    "CZE": {
+      "flag": "🇨🇿",
+      "name": "Czechia",
+      "ranking": 40
+    },
+    "HAI": {
+      "flag": "🇭🇹",
+      "name": "Haiti",
+      "ranking": 83
+    },
+    "KOR": {
+      "flag": "🇰🇷",
+      "name": "Korea Republic",
+      "ranking": 25
+    },
+    "MAR": {
+      "flag": "🇲🇦",
+      "name": "Morocco",
+      "ranking": 7
+    },
+    "MEX": {
+      "flag": "🇲🇽",
+      "name": "Mexico",
+      "ranking": 14
+    },
+    "PAR": {
+      "flag": "🇵🇾",
+      "name": "Paraguay",
+      "ranking": 41
+    },
+    "QAT": {
+      "flag": "🇶🇦",
+      "name": "Qatar",
+      "ranking": 56
+    },
+    "RSA": {
+      "flag": "🇿🇦",
+      "name": "South Africa",
+      "ranking": 60
+    },
+    "SCO": {
+      "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
+      "name": "Scotland",
+      "ranking": 42
+    },
+    "SUI": {
+      "flag": "🇨🇭",
+      "name": "Switzerland",
+      "ranking": 19
+    },
+    "TUR": {
+      "flag": "🇹🇷",
+      "name": "Türkiye",
+      "ranking": 22
+    },
+    "USA": {
+      "flag": "🇺🇸",
+      "name": "USA",
+      "ranking": 17
+    },
+    "BEL": {
+      "flag": "🇧🇪",
+      "name": "Belgium",
+      "ranking": 9
+    },
+    "CIV": {
+      "flag": "🇨🇮",
+      "name": "Côte d'Ivoire",
+      "ranking": 33
+    },
+    "CPV": {
+      "flag": "🇨🇻",
+      "name": "Cabo Verde",
+      "ranking": 67
+    },
+    "CUW": {
+      "flag": "🇨🇺",
+      "name": "Curaçao",
+      "ranking": 82
+    },
+    "ECU": {
+      "flag": "🇪🇨",
+      "name": "Ecuador",
+      "ranking": 23
+    },
+    "EGY": {
+      "flag": "🇪🇬",
+      "name": "Egypt",
+      "ranking": 29
+    },
+    "ESP": {
+      "flag": "🇪🇸",
+      "name": "Spain",
+      "ranking": 2
+    },
+    "GER": {
+      "flag": "🇩🇪",
+      "name": "Germany",
+      "ranking": 10
+    },
+    "IRN": {
+      "flag": "🇮🇷",
+      "name": "IR Iran",
+      "ranking": 20
+    },
+    "JPN": {
+      "flag": "🇯🇵",
+      "name": "Japan",
+      "ranking": 18
+    },
+    "KSA": {
+      "flag": "🇸🇦",
+      "name": "Saudi Arabia",
+      "ranking": 61
+    },
+    "NED": {
+      "flag": "🇳🇱",
+      "name": "Netherlands",
+      "ranking": 8
+    },
+    "NZL": {
+      "flag": "🇳🇿",
+      "name": "New Zealand",
+      "ranking": 85
+    },
+    "SWE": {
+      "flag": "🇸🇪",
+      "name": "Sweden",
+      "ranking": 38
+    },
+    "TUN": {
+      "flag": "🇹🇳",
+      "name": "Tunisia",
+      "ranking": 45
+    },
+    "URU": {
+      "flag": "🇺🇾",
+      "name": "Uruguay",
+      "ranking": 16
+    },
+    "ALG": {
+      "flag": "🇩🇿",
+      "name": "Algeria",
+      "ranking": 28
+    },
+    "ARG": {
+      "flag": "🇦🇷",
+      "name": "Argentina",
+      "ranking": 1
+    },
+    "AUT": {
+      "flag": "🇦🇹",
+      "name": "Austria",
+      "ranking": 24
+    },
+    "COD": {
+      "flag": "🇨🇩",
+      "name": "DR Congo",
+      "ranking": 46
+    },
+    "COL": {
+      "flag": "🇨🇴",
+      "name": "Colombia",
+      "ranking": 13
+    },
+    "CRO": {
+      "flag": "🇭🇷",
+      "name": "Croatia",
+      "ranking": 11
+    },
+    "ENG": {
+      "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      "name": "England",
+      "ranking": 4
+    },
+    "FRA": {
+      "flag": "🇫🇷",
+      "name": "France",
+      "ranking": 3
+    },
+    "GHA": {
+      "flag": "🇬🇭",
+      "name": "Ghana",
+      "ranking": 73
+    },
+    "IRQ": {
+      "flag": "🇮🇶",
+      "name": "Iraq",
+      "ranking": 57
+    },
+    "JOR": {
+      "flag": "🇯🇴",
+      "name": "Jordan",
+      "ranking": 63
+    },
+    "NOR": {
+      "flag": "🇳🇴",
+      "name": "Norway",
+      "ranking": 31
+    },
+    "PAN": {
+      "flag": "🇵🇦",
+      "name": "Panama",
+      "ranking": 34
+    },
+    "POR": {
+      "flag": "🇵🇹",
+      "name": "Portugal",
+      "ranking": 5
+    },
+    "SEN": {
+      "flag": "🇸🇳",
+      "name": "Senegal",
+      "ranking": 15
+    },
+    "UZB": {
+      "flag": "🇺🇿",
+      "name": "Uzbekistan",
+      "ranking": 50
+    }
+  },
+  "stadiums": {
+    "I": {
+      "city": "Atlanta",
+      "name": "Atlanta Stadium"
+    },
+    "II": {
+      "city": "Boston",
+      "name": "Boston Stadium"
+    },
+    "III": {
+      "city": "Dallas",
+      "name": "Dallas Stadium"
+    },
+    "IV": {
+      "city": "Philadelphia",
+      "name": "Philadelphia Stadium"
+    },
+    "V": {
+      "city": "Houston",
+      "name": "Houston Stadium"
+    },
+    "VI": {
+      "city": "Kansas City",
+      "name": "Kansas City Stadium"
+    },
+    "VII": {
+      "city": "Los Angeles",
+      "name": "Los Angeles Stadium"
+    },
+    "VIII": {
+      "city": "Miami",
+      "name": "Miami Stadium"
+    },
+    "IX": {
+      "city": "New York New Jersey",
+      "name": "New York New Jersey Stadium"
+    },
+    "X": {
+      "city": "San Francisco Bay Area",
+      "name": "San Francisco Bay Area Stadium"
+    },
+    "XI": {
+      "city": "Seattle",
+      "name": "Seattle Stadium"
+    },
+    "XII": {
+      "city": "Mexico City",
+      "name": "Mexico City Stadium"
+    },
+    "XIII": {
+      "city": "Guadalajara",
+      "name": "Guadalajara Stadium"
+    },
+    "XIV": {
+      "city": "Monterrey",
+      "name": "Monterrey Stadium"
+    },
+    "XV": {
+      "city": "Toronto",
+      "name": "Toronto Stadium"
+    },
+    "XVI": {
+      "city": "Vancouver",
+      "name": "BC Place Vancouver"
+    }
+  },
+  "groups": {
+    "A": {
+      "teams": [
+        "MEX",
+        "RSA",
+        "KOR",
+        "CZE"
+      ],
+      "matches": [
+        {
+          "id": 1,
+          "round": "1",
+          "utc": "2026-06-11T19:00:00Z",
+          "stadium": "XII",
+          "home": "MEX",
+          "away": "RSA"
+        },
+        {
+          "id": 2,
+          "round": "1",
+          "utc": "2026-06-12T02:00:00Z",
+          "stadium": "XIII",
+          "home": "KOR",
+          "away": "CZE"
+        },
+        {
+          "id": 25,
+          "round": "2",
+          "utc": "2026-06-18T16:00:00Z",
+          "stadium": "I",
+          "home": "CZE",
+          "away": "RSA"
+        },
+        {
+          "id": 28,
+          "round": "2",
+          "utc": "2026-06-19T01:00:00Z",
+          "stadium": "XIII",
+          "home": "MEX",
+          "away": "KOR"
+        },
+        {
+          "id": 53,
+          "round": "3",
+          "utc": "2026-06-25T01:00:00Z",
+          "stadium": "XII",
+          "home": "CZE",
+          "away": "MEX"
+        },
+        {
+          "id": 54,
+          "round": "3",
+          "utc": "2026-06-25T01:00:00Z",
+          "stadium": "VII",
+          "home": "RSA",
+          "away": "KOR"
+        }
+      ]
+    },
+    "B": {
+      "teams": [
+        "CAN",
+        "BIH",
+        "QAT",
+        "SUI"
+      ],
+      "matches": [
+        {
+          "id": 3,
+          "round": "1",
+          "utc": "2026-06-12T19:00:00Z",
+          "stadium": "XV",
+          "home": "CAN",
+          "away": "BIH"
+        },
+        {
+          "id": 8,
+          "round": "1",
+          "utc": "2026-06-13T19:00:00Z",
+          "stadium": "X",
+          "home": "QAT",
+          "away": "SUI"
+        },
+        {
+          "id": 26,
+          "round": "2",
+          "utc": "2026-06-18T19:00:00Z",
+          "stadium": "VII",
+          "home": "SUI",
+          "away": "BIH"
+        },
+        {
+          "id": 27,
+          "round": "2",
+          "utc": "2026-06-18T22:00:00Z",
+          "stadium": "XVI",
+          "home": "CAN",
+          "away": "QAT"
+        },
+        {
+          "id": 51,
+          "round": "3",
+          "utc": "2026-06-24T19:00:00Z",
+          "stadium": "XVI",
+          "home": "SUI",
+          "away": "CAN"
+        },
+        {
+          "id": 52,
+          "round": "3",
+          "utc": "2026-06-24T19:00:00Z",
+          "stadium": "II",
+          "home": "BIH",
+          "away": "QAT"
+        }
+      ]
+    },
+    "C": {
+      "teams": [
+        "BRA",
+        "MAR",
+        "HAI",
+        "SCO"
+      ],
+      "matches": [
+        {
+          "id": 7,
+          "round": "1",
+          "utc": "2026-06-13T22:00:00Z",
+          "stadium": "IX",
+          "home": "BRA",
+          "away": "MAR"
+        },
+        {
+          "id": 5,
+          "round": "1",
+          "utc": "2026-06-14T01:00:00Z",
+          "stadium": "II",
+          "home": "HAI",
+          "away": "SCO"
+        },
+        {
+          "id": 30,
+          "round": "2",
+          "utc": "2026-06-19T22:00:00Z",
+          "stadium": "II",
+          "home": "SCO",
+          "away": "MAR"
+        },
+        {
+          "id": 29,
+          "round": "2",
+          "utc": "2026-06-20T00:30:00Z",
+          "stadium": "IV",
+          "home": "BRA",
+          "away": "HAI"
+        },
+        {
+          "id": 49,
+          "round": "3",
+          "utc": "2026-06-23T22:00:00Z",
+          "stadium": "VIII",
+          "home": "SCO",
+          "away": "BRA"
+        },
+        {
+          "id": 50,
+          "round": "3",
+          "utc": "2026-06-23T22:00:00Z",
+          "stadium": "I",
+          "home": "MAR",
+          "away": "HAI"
+        }
+      ]
+    },
+    "D": {
+      "teams": [
+        "USA",
+        "PAR",
+        "AUS",
+        "TUR"
+      ],
+      "matches": [
+        {
+          "id": 4,
+          "round": "1",
+          "utc": "2026-06-13T01:00:00Z",
+          "stadium": "VII",
+          "home": "USA",
+          "away": "PAR"
+        },
+        {
+          "id": 6,
+          "round": "1",
+          "utc": "2026-06-14T04:00:00Z",
+          "stadium": "XVI",
+          "home": "AUS",
+          "away": "TUR"
+        },
+        {
+          "id": 32,
+          "round": "2",
+          "utc": "2026-06-19T19:00:00Z",
+          "stadium": "XI",
+          "home": "USA",
+          "away": "AUS"
+        },
+        {
+          "id": 31,
+          "round": "2",
+          "utc": "2026-06-20T03:00:00Z",
+          "stadium": "X",
+          "home": "TUR",
+          "away": "PAR"
+        },
+        {
+          "id": 59,
+          "round": "3",
+          "utc": "2026-06-26T02:00:00Z",
+          "stadium": "XI",
+          "home": "TUR",
+          "away": "USA"
+        },
+        {
+          "id": 60,
+          "round": "3",
+          "utc": "2026-06-26T02:00:00Z",
+          "stadium": "VII",
+          "home": "PAR",
+          "away": "AUS"
+        }
+      ]
+    },
+    "E": {
+      "teams": [
+        "GER",
+        "CUW",
+        "CIV",
+        "ECU"
+      ],
+      "matches": [
+        {
+          "id": 9,
+          "round": "1",
+          "utc": "2026-06-14T17:00:00Z",
+          "stadium": "V",
+          "home": "GER",
+          "away": "CUW"
+        },
+        {
+          "id": 11,
+          "round": "1",
+          "utc": "2026-06-14T23:00:00Z",
+          "stadium": "IV",
+          "home": "CIV",
+          "away": "ECU"
+        },
+        {
+          "id": 34,
+          "round": "2",
+          "utc": "2026-06-20T20:00:00Z",
+          "stadium": "XV",
+          "home": "GER",
+          "away": "CIV"
+        },
+        {
+          "id": 33,
+          "round": "2",
+          "utc": "2026-06-21T00:00:00Z",
+          "stadium": "VI",
+          "home": "ECU",
+          "away": "CUW"
+        },
+        {
+          "id": 55,
+          "round": "3",
+          "utc": "2026-06-25T20:00:00Z",
+          "stadium": "IV",
+          "home": "CUW",
+          "away": "CIV"
+        },
+        {
+          "id": 56,
+          "round": "3",
+          "utc": "2026-06-25T20:00:00Z",
+          "stadium": "IX",
+          "home": "ECU",
+          "away": "GER"
+        }
+      ]
+    },
+    "F": {
+      "teams": [
+        "NED",
+        "JPN",
+        "SWE",
+        "TUN"
+      ],
+      "matches": [
+        {
+          "id": 10,
+          "round": "1",
+          "utc": "2026-06-14T20:00:00Z",
+          "stadium": "III",
+          "home": "NED",
+          "away": "JPN"
+        },
+        {
+          "id": 12,
+          "round": "1",
+          "utc": "2026-06-15T02:00:00Z",
+          "stadium": "XIV",
+          "home": "SWE",
+          "away": "TUN"
+        },
+        {
+          "id": 35,
+          "round": "2",
+          "utc": "2026-06-20T17:00:00Z",
+          "stadium": "V",
+          "home": "NED",
+          "away": "SWE"
+        },
+        {
+          "id": 36,
+          "round": "2",
+          "utc": "2026-06-21T04:00:00Z",
+          "stadium": "XIV",
+          "home": "TUN",
+          "away": "JPN"
+        },
+        {
+          "id": 57,
+          "round": "3",
+          "utc": "2026-06-25T23:00:00Z",
+          "stadium": "III",
+          "home": "JPN",
+          "away": "SWE"
+        },
+        {
+          "id": 58,
+          "round": "3",
+          "utc": "2026-06-25T23:00:00Z",
+          "stadium": "VI",
+          "home": "TUN",
+          "away": "NED"
+        }
+      ]
+    },
+    "G": {
+      "teams": [
+        "BEL",
+        "EGY",
+        "IRN",
+        "NZL"
+      ],
+      "matches": [
+        {
+          "id": 14,
+          "round": "1",
+          "utc": "2026-06-15T19:00:00Z",
+          "stadium": "XI",
+          "home": "BEL",
+          "away": "EGY"
+        },
+        {
+          "id": 16,
+          "round": "1",
+          "utc": "2026-06-16T01:00:00Z",
+          "stadium": "VII",
+          "home": "IRN",
+          "away": "NZL"
+        },
+        {
+          "id": 39,
+          "round": "2",
+          "utc": "2026-06-21T19:00:00Z",
+          "stadium": "VII",
+          "home": "BEL",
+          "away": "IRN"
+        },
+        {
+          "id": 40,
+          "round": "2",
+          "utc": "2026-06-22T01:00:00Z",
+          "stadium": "XVI",
+          "home": "NZL",
+          "away": "EGY"
+        },
+        {
+          "id": 63,
+          "round": "3",
+          "utc": "2026-06-27T03:00:00Z",
+          "stadium": "XI",
+          "home": "EGY",
+          "away": "IRN"
+        },
+        {
+          "id": 64,
+          "round": "3",
+          "utc": "2026-06-27T03:00:00Z",
+          "stadium": "XVI",
+          "home": "NZL",
+          "away": "BEL"
+        }
+      ]
+    },
+    "H": {
+      "teams": [
+        "ESP",
+        "CPV",
+        "KSA",
+        "URU"
+      ],
+      "matches": [
+        {
+          "id": 13,
+          "round": "1",
+          "utc": "2026-06-15T16:00:00Z",
+          "stadium": "I",
+          "home": "ESP",
+          "away": "CPV"
+        },
+        {
+          "id": 15,
+          "round": "1",
+          "utc": "2026-06-15T22:00:00Z",
+          "stadium": "VIII",
+          "home": "KSA",
+          "away": "URU"
+        },
+        {
+          "id": 37,
+          "round": "2",
+          "utc": "2026-06-21T16:00:00Z",
+          "stadium": "I",
+          "home": "ESP",
+          "away": "KSA"
+        },
+        {
+          "id": 38,
+          "round": "2",
+          "utc": "2026-06-21T22:00:00Z",
+          "stadium": "VIII",
+          "home": "URU",
+          "away": "CPV"
+        },
+        {
+          "id": 61,
+          "round": "3",
+          "utc": "2026-06-27T06:00:00Z",
+          "stadium": "XIII",
+          "home": "URU",
+          "away": "ESP"
+        },
+        {
+          "id": 62,
+          "round": "3",
+          "utc": "2026-06-27T06:00:00Z",
+          "stadium": "V",
+          "home": "CPV",
+          "away": "KSA"
+        }
+      ]
+    },
+    "I": {
+      "teams": [
+        "FRA",
+        "SEN",
+        "IRQ",
+        "NOR"
+      ],
+      "matches": [
+        {
+          "id": 17,
+          "round": "1",
+          "utc": "2026-06-16T19:00:00Z",
+          "stadium": "IX",
+          "home": "FRA",
+          "away": "SEN"
+        },
+        {
+          "id": 18,
+          "round": "1",
+          "utc": "2026-06-16T22:00:00Z",
+          "stadium": "II",
+          "home": "IRQ",
+          "away": "NOR"
+        },
+        {
+          "id": 42,
+          "round": "2",
+          "utc": "2026-06-22T20:00:00Z",
+          "stadium": "IV",
+          "home": "FRA",
+          "away": "IRQ"
+        },
+        {
+          "id": 41,
+          "round": "2",
+          "utc": "2026-06-22T23:00:00Z",
+          "stadium": "IX",
+          "home": "NOR",
+          "away": "SEN"
+        },
+        {
+          "id": 65,
+          "round": "3",
+          "utc": "2026-06-26T18:00:00Z",
+          "stadium": "II",
+          "home": "NOR",
+          "away": "FRA"
+        },
+        {
+          "id": 66,
+          "round": "3",
+          "utc": "2026-06-26T18:00:00Z",
+          "stadium": "XV",
+          "home": "SEN",
+          "away": "IRQ"
+        }
+      ]
+    },
+    "J": {
+      "teams": [
+        "ARG",
+        "ALG",
+        "AUT",
+        "JOR"
+      ],
+      "matches": [
+        {
+          "id": 19,
+          "round": "1",
+          "utc": "2026-06-17T01:00:00Z",
+          "stadium": "VI",
+          "home": "ARG",
+          "away": "ALG"
+        },
+        {
+          "id": 20,
+          "round": "1",
+          "utc": "2026-06-17T04:00:00Z",
+          "stadium": "X",
+          "home": "AUT",
+          "away": "JOR"
+        },
+        {
+          "id": 43,
+          "round": "2",
+          "utc": "2026-06-22T16:00:00Z",
+          "stadium": "III",
+          "home": "ARG",
+          "away": "AUT"
+        },
+        {
+          "id": 44,
+          "round": "2",
+          "utc": "2026-06-23T02:00:00Z",
+          "stadium": "X",
+          "home": "JOR",
+          "away": "ALG"
+        },
+        {
+          "id": 69,
+          "round": "3",
+          "utc": "2026-06-28T01:00:00Z",
+          "stadium": "VI",
+          "home": "ALG",
+          "away": "AUT"
+        },
+        {
+          "id": 70,
+          "round": "3",
+          "utc": "2026-06-28T01:00:00Z",
+          "stadium": "III",
+          "home": "JOR",
+          "away": "ARG"
+        }
+      ]
+    },
+    "K": {
+      "teams": [
+        "POR",
+        "COD",
+        "UZB",
+        "COL"
+      ],
+      "matches": [
+        {
+          "id": 23,
+          "round": "1",
+          "utc": "2026-06-17T17:00:00Z",
+          "stadium": "V",
+          "home": "POR",
+          "away": "COD"
+        },
+        {
+          "id": 24,
+          "round": "1",
+          "utc": "2026-06-18T02:00:00Z",
+          "stadium": "XII",
+          "home": "UZB",
+          "away": "COL"
+        },
+        {
+          "id": 47,
+          "round": "2",
+          "utc": "2026-06-23T17:00:00Z",
+          "stadium": "V",
+          "home": "POR",
+          "away": "UZB"
+        },
+        {
+          "id": 48,
+          "round": "2",
+          "utc": "2026-06-24T01:00:00Z",
+          "stadium": "XIII",
+          "home": "COL",
+          "away": "COD"
+        },
+        {
+          "id": 71,
+          "round": "3",
+          "utc": "2026-06-27T22:30:00Z",
+          "stadium": "VIII",
+          "home": "COL",
+          "away": "POR"
+        },
+        {
+          "id": 72,
+          "round": "3",
+          "utc": "2026-06-27T22:30:00Z",
+          "stadium": "I",
+          "home": "COD",
+          "away": "UZB"
+        }
+      ]
+    },
+    "L": {
+      "teams": [
+        "ENG",
+        "CRO",
+        "GHA",
+        "PAN"
+      ],
+      "matches": [
+        {
+          "id": 22,
+          "round": "1",
+          "utc": "2026-06-17T20:00:00Z",
+          "stadium": "III",
+          "home": "ENG",
+          "away": "CRO"
+        },
+        {
+          "id": 21,
+          "round": "1",
+          "utc": "2026-06-17T23:00:00Z",
+          "stadium": "XV",
+          "home": "GHA",
+          "away": "PAN"
+        },
+        {
+          "id": 45,
+          "round": "2",
+          "utc": "2026-06-23T20:00:00Z",
+          "stadium": "II",
+          "home": "ENG",
+          "away": "GHA"
+        },
+        {
+          "id": 46,
+          "round": "2",
+          "utc": "2026-06-23T23:00:00Z",
+          "stadium": "XV",
+          "home": "PAN",
+          "away": "CRO"
+        },
+        {
+          "id": 67,
+          "round": "3",
+          "utc": "2026-06-27T20:00:00Z",
+          "stadium": "IX",
+          "home": "PAN",
+          "away": "ENG"
+        },
+        {
+          "id": 68,
+          "round": "3",
+          "utc": "2026-06-27T20:00:00Z",
+          "stadium": "IV",
+          "home": "CRO",
+          "away": "GHA"
+        }
+      ]
+    }
+  },
+  "knockout": {
+    "round_of_32": [
+      {
+        "id": 73,
+        "round": "r32",
+        "utc": "2026-06-28T21:00:00Z",
+        "stadium": "VII",
+        "home": "2A",
+        "away": "2B",
+        "label": "2Ax2B"
+      },
+      {
+        "id": 74,
+        "round": "r32",
+        "utc": "2026-06-29T20:30:00Z",
+        "stadium": "II",
+        "home": "1E",
+        "away": "3ABCDF",
+        "label": "1Ex3ABCDF"
+      },
+      {
+        "id": 75,
+        "round": "r32",
+        "utc": "2026-06-30T01:00:00Z",
+        "stadium": "XIV",
+        "home": "1F",
+        "away": "2E",
+        "label": "1Fx2E"
+      },
+      {
+        "id": 76,
+        "round": "r32",
+        "utc": "2026-06-30T17:00:00Z",
+        "stadium": "III",
+        "home": "1I",
+        "away": "3CDEGH",
+        "label": "1Ix3CDEGH"
+      },
+      {
+        "id": 77,
+        "round": "r32",
+        "utc": "2026-06-30T21:00:00Z",
+        "stadium": "IX",
+        "home": "1G",
+        "away": "3ABCEF",
+        "label": "1Gx3ABCEF"
+      },
+      {
+        "id": 78,
+        "round": "r32",
+        "utc": "2026-07-01T01:00:00Z",
+        "stadium": "XII",
+        "home": "1A",
+        "away": "3CEFHI",
+        "label": "1Ax3CEFHI"
+      },
+      {
+        "id": 79,
+        "round": "r32",
+        "utc": "2026-07-01T16:00:00Z",
+        "stadium": "I",
+        "home": "1L",
+        "away": "3EHIJK",
+        "label": "1Lx3EHIJK"
+      },
+      {
+        "id": 80,
+        "round": "r32",
+        "utc": "2026-07-01T20:00:00Z",
+        "stadium": "X",
+        "home": "1J",
+        "away": "2I",
+        "label": "1Jx2I"
+      },
+      {
+        "id": 81,
+        "round": "r32",
+        "utc": "2026-07-02T00:00:00Z",
+        "stadium": "XI",
+        "home": "1D",
+        "away": "3BEFIJ",
+        "label": "1Dx3BEFIJ"
+      },
+      {
+        "id": 82,
+        "round": "r32",
+        "utc": "2026-07-02T17:00:00Z",
+        "stadium": "XV",
+        "home": "2K",
+        "away": "2L",
+        "label": "2Kx2L"
+      },
+      {
+        "id": 83,
+        "round": "r32",
+        "utc": "2026-07-02T20:00:00Z",
+        "stadium": "VII",
+        "home": "1H",
+        "away": "2G",
+        "label": "1Hx2G"
+      },
+      {
+        "id": 84,
+        "round": "r32",
+        "utc": "2026-07-03T00:30:00Z",
+        "stadium": "V",
+        "home": "1C",
+        "away": "3FGHIJ",
+        "label": "1Cx3FGHIJ"
+      },
+      {
+        "id": 85,
+        "round": "r32",
+        "utc": "2026-07-03T20:00:00Z",
+        "stadium": "VIII",
+        "home": "1K",
+        "away": "3DEIJL",
+        "label": "1Kx3DEIJL"
+      },
+      {
+        "id": 86,
+        "round": "r32",
+        "utc": "2026-07-04T00:00:00Z",
+        "stadium": "III",
+        "home": "2C",
+        "away": "2D",
+        "label": "2Cx2D"
+      },
+      {
+        "id": 87,
+        "round": "r32",
+        "utc": "2026-07-04T02:00:00Z",
+        "stadium": "VI",
+        "home": "1B",
+        "away": "3EFGHI",
+        "label": "1Bx3EFGHI"
+      },
+      {
+        "id": 88,
+        "round": "r32",
+        "utc": "2026-07-04T03:00:00Z",
+        "stadium": "XVI",
+        "home": "2F",
+        "away": "2H",
+        "label": "2Fx2H"
+      }
+    ],
+    "round_of_16": [
+      {
+        "id": 89,
+        "round": "r16",
+        "utc": "2026-07-04T21:00:00Z",
+        "stadium": "IV",
+        "home": "W74",
+        "away": "W77",
+        "label": "W74xW77"
+      },
+      {
+        "id": 90,
+        "round": "r16",
+        "utc": "2026-07-05T00:30:00Z",
+        "stadium": "V",
+        "home": "W73",
+        "away": "W75",
+        "label": "W73xW75"
+      },
+      {
+        "id": 91,
+        "round": "r16",
+        "utc": "2026-07-05T20:00:00Z",
+        "stadium": "IX",
+        "home": "W76",
+        "away": "W78",
+        "label": "W76xW78"
+      },
+      {
+        "id": 92,
+        "round": "r16",
+        "utc": "2026-07-06T00:00:00Z",
+        "stadium": "XII",
+        "home": "W79",
+        "away": "W80",
+        "label": "W79xW80"
+      },
+      {
+        "id": 93,
+        "round": "r16",
+        "utc": "2026-07-06T18:00:00Z",
+        "stadium": "III",
+        "home": "W82",
+        "away": "W84",
+        "label": "W82xW84"
+      },
+      {
+        "id": 94,
+        "round": "r16",
+        "utc": "2026-07-06T23:00:00Z",
+        "stadium": "XI",
+        "home": "W81",
+        "away": "W83",
+        "label": "W81xW83"
+      },
+      {
+        "id": 95,
+        "round": "r16",
+        "utc": "2026-07-07T20:00:00Z",
+        "stadium": "I",
+        "home": "W85",
+        "away": "W86",
+        "label": "W85xW86"
+      },
+      {
+        "id": 96,
+        "round": "r16",
+        "utc": "2026-07-08T00:00:00Z",
+        "stadium": "XVI",
+        "home": "W87",
+        "away": "W88",
+        "label": "W87xW88"
+      }
+    ],
+    "quarter_finals": [
+      {
+        "id": 97,
+        "round": "qf",
+        "utc": "2026-07-10T00:00:00Z",
+        "stadium": "II",
+        "home": "W89",
+        "away": "W90",
+        "label": "W89xW90"
+      },
+      {
+        "id": 98,
+        "round": "qf",
+        "utc": "2026-07-10T23:00:00Z",
+        "stadium": "VII",
+        "home": "W91",
+        "away": "W92",
+        "label": "W91xW92"
+      },
+      {
+        "id": 99,
+        "round": "qf",
+        "utc": "2026-07-11T20:00:00Z",
+        "stadium": "VIII",
+        "home": "W93",
+        "away": "W94",
+        "label": "W93xW94"
+      },
+      {
+        "id": 100,
+        "round": "qf",
+        "utc": "2026-07-12T00:00:00Z",
+        "stadium": "VI",
+        "home": "W95",
+        "away": "W96",
+        "label": "W95xW96"
+      }
+    ],
+    "semi_finals": [
+      {
+        "id": 101,
+        "round": "sf",
+        "utc": "2026-07-15T00:00:00Z",
+        "stadium": "III",
+        "home": "W97",
+        "away": "W98",
+        "label": "W97xW98"
+      },
+      {
+        "id": 102,
+        "round": "sf",
+        "utc": "2026-07-16T00:00:00Z",
+        "stadium": "I",
+        "home": "W99",
+        "away": "W100",
+        "label": "W99xW100"
+      }
+    ],
+    "finals": [
+      {
+        "id": 103,
+        "round": "po",
+        "utc": "2026-07-18T20:00:00Z",
+        "stadium": "VIII",
+        "home": "L101",
+        "away": "L102",
+        "label": "L101xL102"
+      },
+      {
+        "id": 104,
+        "round": "f",
+        "utc": "2026-07-19T20:00:00Z",
+        "stadium": "IX",
+        "home": "W101",
+        "away": "W102",
+        "label": "W101xW102"
+      }
+    ]
+  }
+}

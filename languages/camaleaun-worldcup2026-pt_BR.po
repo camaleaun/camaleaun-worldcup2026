@@ -1,0 +1,320 @@
+# Portuguese (Brazil) translation for WC2026 Schedule
+# Copyright (C) 2026 camaleaun
+# This file is distributed under the same license as the WC2026 Schedule plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: camaleaun-worldcup2026 2.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/camaleaun/worldcup2026\n"
+"POT-Creation-Date: 2026-06-11T00:00:00+00:00\n"
+"PO-Revision-Date: 2026-06-11T00:00:00+00:00\n"
+"Last-Translator: camaleaun\n"
+"Language-Team: Portuguese (Brazil)\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Manual\n"
+"X-Domain: camaleaun-worldcup2026\n"
+
+# Block metadata
+msgid "World Cup 2026 Schedule"
+msgstr "Tabela da Copa do Mundo 2026"
+
+msgid "Full FIFA World Cup 2026™ interactive schedule with live score tracking."
+msgstr "Tabela interativa completa da FIFA Copa do Mundo 2026™ com registro de resultados em tempo real."
+
+# Editor
+msgid "Schedule Settings"
+msgstr "Configurações da Tabela"
+
+msgid "Default tab"
+msgstr "Aba padrão"
+
+msgid "Results URL (GitHub raw)"
+msgstr "URL dos resultados (GitHub raw)"
+
+msgid "URL to a raw JSON file with match scores. Leave empty to disable sync."
+msgstr "URL para um arquivo JSON com os resultados dos jogos. Deixe vazio para desativar a sincronização."
+
+msgid "Interactive Schedule Block"
+msgstr "Bloco de Tabela Interativa"
+
+msgid "The full schedule renders on the front end with score entry, calendar, matches, groups and knockout bracket."
+msgstr "A tabela completa é exibida no frontend com registro de placar, calendário, jogos, grupos e chaveamento."
+
+# Tabs
+msgid "Calendar"
+msgstr "Calendário"
+
+msgid "Matches"
+msgstr "Jogos"
+
+msgid "Groups"
+msgstr "Grupos"
+
+msgid "Knockout"
+msgstr "Mata-mata"
+
+# Match detail labels
+msgid "Back"
+msgstr "Voltar"
+
+msgid "Back to calendar"
+msgstr "Voltar ao calendário"
+
+msgid "Date"
+msgstr "Data"
+
+msgid "Time"
+msgstr "Hora"
+
+msgid "Venue"
+msgstr "Local"
+
+msgid "Edit score"
+msgstr "Editar placar"
+
+msgid "Enter score"
+msgstr "Inserir placar"
+
+msgid "Remove score"
+msgstr "Remover placar"
+
+# Round labels
+msgid "Round of 32"
+msgstr "Rodada de 32"
+
+msgid "Round of 16"
+msgstr "Oitavas de Final"
+
+msgid "Quarter-final"
+msgstr "Quartas de Final"
+
+msgid "Semi-final"
+msgstr "Semifinal"
+
+msgid "Third Place"
+msgstr "Terceiro Lugar"
+
+msgid "Final"
+msgstr "Final"
+
+msgid "Group"
+msgstr "Grupo"
+
+msgid "Round"
+msgstr "Rodada"
+
+# Standings
+msgid "Standings"
+msgstr "Classificação"
+
+msgid "Team"
+msgstr "Seleção"
+
+msgid "Matches Played"
+msgstr "Partidas Jogadas"
+
+msgid "Wins"
+msgstr "Vitórias"
+
+msgid "Draws"
+msgstr "Empates"
+
+msgid "Losses"
+msgstr "Derrotas"
+
+msgid "Goals For"
+msgstr "Gols Pró"
+
+msgid "Goals Against"
+msgstr "Gols Contra"
+
+msgid "Goal Diff"
+msgstr "Saldo de Gols"
+
+msgid "Points"
+msgstr "Pontos"
+
+# Matches table
+msgid "All Matches"
+msgstr "Todos os Jogos"
+
+msgid "Group Stage"
+msgstr "Fase de Grupos"
+
+msgid "Date / Time"
+msgstr "Data / Hora"
+
+msgid "Fixture"
+msgstr "Confronto"
+
+msgid "Score"
+msgstr "Placar"
+
+msgid "Quarter-finals"
+msgstr "Quartas de Final"
+
+msgid "Semi-finals"
+msgstr "Semifinais"
+
+msgid "Finals"
+msgstr "Finais"
+
+# Groups
+msgid "All Groups"
+msgstr "Todos os Grupos"
+
+# GitHub sync
+msgid "Timezone"
+msgstr "Fuso Horário"
+
+# Noscript
+msgid "Please enable JavaScript to view the FIFA World Cup 2026™ schedule."
+msgstr "Por favor, ative o JavaScript para visualizar a tabela da FIFA Copa do Mundo 2026™."
+
+# Teams (from fifa_code_dictionary_ptb)
+msgid "Australia"
+msgstr "Austrália"
+
+msgid "Bosnia and Herzegovina"
+msgstr "Bósnia e Herzegovina"
+
+msgid "Brazil"
+msgstr "Brasil"
+
+msgid "Canada"
+msgstr "Canadá"
+
+msgid "Czechia"
+msgstr "Tchéquia"
+
+msgid "Haiti"
+msgstr "Haiti"
+
+msgid "Korea Republic"
+msgstr "República da Coreia"
+
+msgid "Morocco"
+msgstr "Marrocos"
+
+msgid "Mexico"
+msgstr "México"
+
+msgid "Paraguay"
+msgstr "Paraguai"
+
+msgid "Qatar"
+msgstr "Catar"
+
+msgid "South Africa"
+msgstr "África do Sul"
+
+msgid "Scotland"
+msgstr "Escócia"
+
+msgid "Switzerland"
+msgstr "Suíça"
+
+msgid "Türkiye"
+msgstr "Turquia"
+
+msgid "USA"
+msgstr "Estados Unidos"
+
+msgid "Belgium"
+msgstr "Bélgica"
+
+msgid "Côte d'Ivoire"
+msgstr "Costa do Marfim"
+
+msgid "Cabo Verde"
+msgstr "Cabo Verde"
+
+msgid "Curaçao"
+msgstr "Curaçau"
+
+msgid "Ecuador"
+msgstr "Equador"
+
+msgid "Egypt"
+msgstr "Egito"
+
+msgid "Spain"
+msgstr "Espanha"
+
+msgid "Germany"
+msgstr "Alemanha"
+
+msgid "IR Iran"
+msgstr "RI do Irã"
+
+msgid "Japan"
+msgstr "Japão"
+
+msgid "Saudi Arabia"
+msgstr "Arábia Saudita"
+
+msgid "Netherlands"
+msgstr "Holanda (Países Baixos)"
+
+msgid "New Zealand"
+msgstr "Nova Zelândia"
+
+msgid "Sweden"
+msgstr "Suécia"
+
+msgid "Tunisia"
+msgstr "Tunísia"
+
+msgid "Uruguay"
+msgstr "Uruguai"
+
+msgid "Algeria"
+msgstr "Argélia"
+
+msgid "Argentina"
+msgstr "Argentina"
+
+msgid "Austria"
+msgstr "Áustria"
+
+msgid "DR Congo"
+msgstr "RD do Congo"
+
+msgid "Colombia"
+msgstr "Colômbia"
+
+msgid "Croatia"
+msgstr "Croácia"
+
+msgid "England"
+msgstr "Inglaterra"
+
+msgid "France"
+msgstr "França"
+
+msgid "Ghana"
+msgstr "Gana"
+
+msgid "Iraq"
+msgstr "Iraque"
+
+msgid "Jordan"
+msgstr "Jordânia"
+
+msgid "Norway"
+msgstr "Noruega"
+
+msgid "Panama"
+msgstr "Panamá"
+
+msgid "Portugal"
+msgstr "Portugal"
+
+msgid "Senegal"
+msgstr "Senegal"
+
+msgid "Uzbekistan"
+msgstr "Uzbequistão"
