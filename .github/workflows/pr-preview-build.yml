@@ -1,0 +1,16 @@
+name: PR Preview - Build
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, edited]
+jobs:
+  build:
+    uses: WordPress/action-wp-playground-pr-preview/.github/workflows/preview-build.yml@v3
+    with:
+      artifacts: plugin-zip=dist/camaleaun-worldcup2026.zip
+      node-version: '20'
+      build-command: |
+        npm ci && npm run build
+        mkdir -p dist
+        git archive HEAD --prefix=camaleaun-worldcup2026/ | tar xf - -C dist/
+        cp -r build/ dist/camaleaun-worldcup2026/build/
+        (cd dist && zip -r camaleaun-worldcup2026.zip camaleaun-worldcup2026)
